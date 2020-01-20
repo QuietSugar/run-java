@@ -1,0 +1,3 @@
+id,tCode,tPath,dCode,dPath,desc
+1,demo,/init/template/demo.md,demo,/init/data/demo.json,示例
+2,vm-setenv,/init/template/fabric/setenv.md.ftl,vm-setenv,/init/data/fabric/fabric.json,虚拟机里面部署的区块链

@@ -1,0 +1,13 @@
+{
+  "binPath": "/opt/gopath/src/github.com/hyperledger/fabric/.build/bin/",
+  "tlsEnabled": true,
+  "clientTlsEnabled": true,
+  "orderingServiceEndpoint": "orderer.example.com:7050",
+  "ordererDomain": "example.com",
+  "peerLocalMspid": "Org1MSP",
+  "peerOrgName": "org1",
+  "peerName": "peer0",
+  "peerDomain": "example.com",
+  "channelID": "testchannel",
+  "chaincodeName": "testcc"
+}

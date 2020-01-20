@@ -1,0 +1,15 @@
+package ${packageName};
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+/**
+ * Maybe has infinite possibilities
+  中文注释
+ *
+ * @author Created by HuoXu <2542610526@qq.com>
+ */
+public class ${modelName} {
+    private static final Logger LOGGER = LoggerFactory.getLogger(${modelName}.class);
+
+}
