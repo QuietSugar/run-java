@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>name.xu.plugin</groupId>
+    <artifactId>mybatis</artifactId>
+    <packaging>jar</packaging>
+    <version>1.0.1</version>
+    <name>mybatis</name>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
+        <!--自定义mybatis插件的时候会用到-->
+        <dependency>
+            <groupId>org.mybatis.generator</groupId>
+            <artifactId>mybatis-generator-core</artifactId>
+            <version>${plugin.mybatis.generator}</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+    <!--以下是显式的配置deploy，也可以使用命令行-->
+    <!--
+    mvn deploy -DaltDeploymentRepository=maybe-mvn-repo::default::file:target/maven-repo/repository/
+    -->
+    <distributionManagement>
+        <repository>
+            <id>gitee</id>
+            <url>file:${project.basedir}/../release</url>
+        </repository>
+    </distributionManagement>
+
+    <!--<build>-->
+        <!--<plugins>-->
+            <!--<plugin>-->
+                <!--<artifactId>maven-deploy-plugin</artifactId>-->
+                <!--<version>2.8.1</version>-->
+                <!--<configuration>-->
+                    <!--&lt;!&ndash;发布地址, deploy 之后可以发布到本地仓库,以及目标目录&ndash;&gt;-->
+                    <!--<altDeploymentRepository>internal.repo::default::file://${project.build.directory}/mvn-repo-->
+                    <!--</altDeploymentRepository>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
+        <!--</plugins>-->
+    <!--</build>-->
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <encoding>UTF-8</encoding>
+
+        <plugin.mybatis.generator>1.3.3</plugin.mybatis.generator>
+        <github.global.server>github</github.global.server>
+    </properties>
+</project>

@@ -3,17 +3,18 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>name.xu</groupId>
-    <artifactId>run-java</artifactId>
+    <artifactId>maven-repository</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <modules>
-        <module>template-freemarker</module>
-        <module>sync-showdoc</module>
-        <module>code-auto</module>
-        <module>xu-service</module>
-        <module>maven-repository</module>
-        <module>project-mybatis-generator</module>
+        <module>mybatis</module>
     </modules>
+    <name>xu-repository</name>
+
+    <build>
+        <finalName>xu-repository</finalName>
+    </build>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
